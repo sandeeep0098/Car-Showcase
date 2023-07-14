@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { CarProps } from '@/types';
 import CustomButton from './CustomButton';
-import { calculateCarRent } from '@/utils';
+import { calculateCarRent, generateCarImageUrl } from '@/utils';
 import CarDetails from './CarDetails';
 
 interface CarCardProps {
@@ -15,7 +15,7 @@ const CarCard = ({ car }: CarCardProps) => {
   const { city_mpg, year, make, model, transmission, drive } = car;
 
   const carRent = calculateCarRent(city_mpg, year);
-  const [isopen, setIsopen] = useState(false);
+  const [isopen, setIsOpen] = useState(false);
 
   return (
     <div className="car-card group">
@@ -35,7 +35,7 @@ const CarCard = ({ car }: CarCardProps) => {
           className="object-contain h-full "
           fill
           priority
-          src="/hero.png"
+          src={generateCarImageUrl(car)}
           alt="hero"
         />
       </div>
@@ -77,7 +77,7 @@ const CarCard = ({ car }: CarCardProps) => {
       </div>
       <CarDetails
         isOpen={isopen}
-        closeModal={() => setIsopen(false)}
+        closeModal={() => setIsOpen(false)}
         car={car}
       />
     </div>
