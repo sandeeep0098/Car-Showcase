@@ -67,7 +67,7 @@ const CarDetails = ({ isOpen, closeModal, car }: carDetailsProps) => {
                           className="object-contain h-full "
                           fill
                           priority
-                          src="/hero.png"
+                          src="/back-view.jpg"
                           alt="hero"
                         />
                       </div>
@@ -76,7 +76,7 @@ const CarDetails = ({ isOpen, closeModal, car }: carDetailsProps) => {
                           className="object-contain h-full "
                           fill
                           priority
-                          src="/hero.png"
+                          src="/new_right.jpg"
                           alt="hero"
                         />
                       </div>
@@ -85,7 +85,7 @@ const CarDetails = ({ isOpen, closeModal, car }: carDetailsProps) => {
                           className="object-contain h-full "
                           fill
                           priority
-                          src="/hero.png"
+                          src="/top-view.avif"
                           alt="hero"
                         />
                       </div>
